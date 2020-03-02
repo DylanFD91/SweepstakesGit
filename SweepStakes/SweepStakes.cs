@@ -10,7 +10,8 @@ namespace SweepStakes
     {
         //Members
         Dictionary<int, Contestant> contestants;
-        int regnumber = 0;
+        Random rng;
+        int dictionarynumber = 0;
         
         //Constructor
         public SweepStakes(string name)
@@ -21,17 +22,21 @@ namespace SweepStakes
         //Methods
         public void RegisterContestant(Contestant contestant)
         {
-            regnumber++;
-            contestants.Add(regnumber, contestant);
+            dictionarynumber++;
+            contestants.Add(dictionarynumber, contestant);
         }
-        Contestant PickWinner()
+        public Contestant PickWinner()
         {
-            
+            int randomDictionaryNumber;
+            randomDictionaryNumber = new Random().Next(dictionarynumber);
+            Contestant winner = contestants[randomDictionaryNumber];
             return winner;
         }
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            Console.WriteLine("Name: " + contestant.firstName + " " + contestant.lastName);
+            Console.WriteLine("Email: " + contestant.emailAddress);
+            Console.WriteLine("Registration number: " + contestant.registrationNumber);
         }
     }
 }

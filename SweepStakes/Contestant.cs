@@ -17,9 +17,10 @@ namespace SweepStakes
         //Constructor
         public Contestant()
         {
-            firstName = UserInterface.GetContestantFirstName();
-            lastName = UserInterface.GetContestantLastName();
-            emailAddress = UserInterface.GetContestantEmailAddress();
+            firstName = UserInterface.ContestantFirstName();
+            lastName = UserInterface.ContestantLastName();
+            emailAddress = UserInterface.ContestantEmailAddress();
+            registrationNumber = UserInterface.ContestantRegistrationNumber();
         }
 
         //Methods
