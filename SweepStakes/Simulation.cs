@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class RunSweepstakes
+    class Simulation
     {
         //Members
         //Constructor
+        public Simulation()
+        {
+
+        }
+
         //Methods
+        public void RunSim()
+        {
+
+        }
     }
 }

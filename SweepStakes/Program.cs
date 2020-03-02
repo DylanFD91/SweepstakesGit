@@ -10,6 +10,8 @@ namespace SweepStakes
     {
         static void Main(string[] args)
         {
+            Simulation newSim = new Simulation();
+            newSim.RunSim();
         }
     }
 }
