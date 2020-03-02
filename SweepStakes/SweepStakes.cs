@@ -21,7 +21,7 @@ namespace SweepStakes
         {
 
         }
-        public void PickWinner()
+        Contestant PickWinner()
         {
 
         }
