@@ -37,5 +37,21 @@ namespace SweepStakes
             Console.WriteLine("Email: " + contestant.emailAddress);
             Console.WriteLine("Registration number: " + contestant.registrationNumber);
         }
+        public void NotifyAllContestants()
+        {
+            Contestant winningContestant = PickWinner();
+            foreach (Contestant contestant in contestants.Values)
+            {
+                if (contestant == winningContestant)
+                {
+                    Console.WriteLine("Congratulations on winning the Sweepstakes!");
+                    PrintContestantInfo(winningContestant);
+                }
+                else
+                {
+                    Console.WriteLine("Sorry but a different contestant has won, better luck next time!");
+                }
+            }
+        }
     }
 }

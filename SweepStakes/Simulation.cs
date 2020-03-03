@@ -14,12 +14,15 @@ namespace SweepStakes
         {
 
         }
-
-        //Methods
+        public string GetInput()
+        {
+            string input = Console.ReadLine().ToLower();
+            return input;
+        }
         public void RunSim()
         {
-            //factory pattern method
-            MarketingFirm marketingFirm = new MarketingFirm();
+            ISweepstakesManager sweepstakesChoice = ManagerFactory.Factory(GetInput());
+            MarketingFirm marketingFirm = new MarketingFirm(sweepstakesChoice);
         }
     }
 }
