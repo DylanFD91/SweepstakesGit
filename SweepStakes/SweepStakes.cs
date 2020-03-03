@@ -27,15 +27,15 @@ namespace SweepStakes
         public Contestant PickWinner()
         {
             int randomDictionaryNumber;
-            randomDictionaryNumber = new Random().Next(dictionarynumber);
+            randomDictionaryNumber = new Random().Next(1, dictionarynumber);
             Contestant winner = contestants[randomDictionaryNumber];
             return winner;
         }
         public void PrintContestantInfo(Contestant contestant)
         {
-            Console.WriteLine("Name: " + contestant.firstName + " " + contestant.lastName);
-            Console.WriteLine("Email: " + contestant.emailAddress);
-            Console.WriteLine("Registration number: " + contestant.registrationNumber);
+            UserInterface.DisplayText("Name: " + contestant.firstName + " " + contestant.lastName);
+            UserInterface.DisplayText("Email: " + contestant.emailAddress);
+            UserInterface.DisplayText("Registration number: " + contestant.registrationNumber);
         }
         public void NotifyAllContestants()
         {
@@ -44,12 +44,12 @@ namespace SweepStakes
             {
                 if (contestant == winningContestant)
                 {
-                    Console.WriteLine("Congratulations on winning the Sweepstakes!");
+                    UserInterface.DisplayText("Congratulations on winning the Sweepstakes!");
                     PrintContestantInfo(winningContestant);
                 }
                 else
                 {
-                    Console.WriteLine("Sorry but a different contestant has won, better luck next time!");
+                    UserInterface.DisplayText("Sorry but a different contestant has won, better luck next time!");
                 }
             }
         }

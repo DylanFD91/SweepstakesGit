@@ -26,6 +26,10 @@ namespace SweepStakes
             string emailn = Console.ReadLine();
             return emailn;
         }
+        public static void DisplayText(string message)
+        {
+            Console.WriteLine(message);
+        }
         public static int ContestantRegistrationNumber()
         {
             int registrationNumber = 0;

@@ -25,7 +25,7 @@ namespace SweepStakes
                         ssManagerChooser = true;
                         break;
                     default:
-                        Console.WriteLine("Improper input try again...");
+                        UserInterface.DisplayText("Improper input try again...");
                         break;
                 }
             }
