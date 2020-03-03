@@ -18,7 +18,8 @@ namespace SweepStakes
         //Methods
         public void RunSim()
         {
-
+            //factory pattern method
+            MarketingFirm marketingFirm = new MarketingFirm();
         }
     }
 }

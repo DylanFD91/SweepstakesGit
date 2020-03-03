@@ -9,24 +9,23 @@ namespace SweepStakes
     class SweepstakesStackManager : ISweepstakesManager
     {
         //Members
-
+        Stack<SweepStakes> stack;
         //Constructor
         public SweepstakesStackManager()
         {
-
+            stack = new Stack<SweepStakes>();
         }
 
         //Methods
         public SweepStakes GetSweepStakes()
         {
-            string name = Console.ReadLine();
-            SweepStakes newSweepStakes = new SweepStakes(name);
-            return newSweepStakes;
+            SweepStakes sweepStakes = stack.Pop();
+            return sweepStakes;
         }
 
         public void InsertSweepstakes(SweepStakes sweepstakes)
         {
-
+            stack.Push(sweepstakes);
         }
     }
 }

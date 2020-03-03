@@ -10,7 +10,6 @@ namespace SweepStakes
     {
         //Members
         Dictionary<int, Contestant> contestants;
-        Random rng;
         int dictionarynumber = 0;
         
         //Constructor
